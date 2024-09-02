@@ -1,105 +1,46 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# Flask specific
-instance/
-.webassets-cache
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Virtual environments
+# Entorno virtual
 .venv/
 venv/
 ENV/
 env/
-.ENV/
+.venv
 env.bak/
 venv.bak/
 
-# VSCode
+# Archivos de configuración
 .vscode/
+*.env
+config.py
 
-# Environments
-.env
-.env.*
+# Caches de Python
+__pycache__/
+*.py[cod]
+*$py.class
 
-# Pyre type checker
-.pyre/
+# Archivos de migración (si no deseas subirlos)
+migrations/
 
-# MyPy type checker
-.mypy_cache/
-
-# Coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-
-# Test logs
+# Archivos de registro
 *.log
 
-# Jupyter Notebook
-.ipynb_checkpoints
+# Archivos de Docker
+Dockerfile
+docker-compose.yml
 
-# Docker
-*.log
-docker-compose.override.yml
-.dockerignore
+# Archivos de paquetes y dependencias
+*.lock
+Pipfile
+Pipfile.lock
+requirements.txt
 
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask stuff:
-instance/
-
-# Static file caches
-staticfiles/
-media/
-.env
-
-# Other settings
-.settings/
-
-# IDE history
+# Historial y archivos temporales
 .history/
+*.bak
+*.swp
+*.swo
+
+# Otros archivos y directorios
+.idea/
+*.sqlite3
+*.db
+*.DS_Store
