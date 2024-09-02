@@ -24,7 +24,6 @@ migrations/
 *.log
 
 # Archivos de Docker
-Dockerfile
 docker-compose.yml
 
 # Archivos de paquetes y dependencias
