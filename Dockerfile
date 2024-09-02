@@ -1,17 +1,16 @@
 FROM python:3.10
 
-RUN pip3 install pipenv
+# Instala las dependencias del sistema necesarias
+RUN apt-get update && \
+    apt-get install -y \
+    libzbar0 \
+    && rm -rf /var/lib/apt/lists/*
 
-ENV PROJECT_DIR /usr/src/flaskbookapi
+WORKDIR /app
 
-WORKDIR ${PROJECT_DIR}
+COPY requirements.txt ./
+RUN pip install -r requirements.txt
 
-COPY Pipfile .
-COPY Pipfile.lock .
 COPY . .
 
-RUN pipenv install --deploy --ignore-pipfile
-
-EXPOSE 5000
-
-CMD ["pipenv", "run", "python", "application.py"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
